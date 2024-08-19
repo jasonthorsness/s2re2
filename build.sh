@@ -35,6 +35,7 @@ BEGIN
     END IF;
     return s2re2_${VERSION}_match_inner(input, pattern);
 END //
+DELIMITER ;
 
 CREATE FUNCTION s2re2_${VERSION}_match_extract_inner(
     input LONGTEXT NOT NULL,
@@ -62,6 +63,7 @@ BEGIN
         RETURN result.s;
     END IF;
 END //
+DELIMITER ;
 " \
 > ./build/s2re2_${VERSION}.sql
 
